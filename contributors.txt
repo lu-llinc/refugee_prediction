@@ -1,0 +1,5 @@
+# CONTRIBUTORS
+
+- Arvid Halma
+- Wouter Eelhout
+- Jasper Ginn
