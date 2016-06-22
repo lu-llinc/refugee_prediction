@@ -1,6 +1,6 @@
 # README
 
-This repository contains all files related to the refugee prediction project at the Leiden University Centre for Innovation. Our writeup can be found [here](www.link.url). This repository contains the following files:
+This repository contains all files related to the refugee prediction project at the Leiden University Centre for Innovation. Our writeup can be found [here](https://lu-c4i.github.io/refugee_prediction/). This repository contains the following files:
 
   - modeling [folder]:
     * R script to re-create refugee prediction models
@@ -10,7 +10,7 @@ This repository contains all files related to the refugee prediction project at 
   - Virtual machine [folder]:
     * Vagrant virtual environment that you can use to re-create our analyses. The environment will contain all the necessary software.
   - Writeup [folder]:
-    * R markdown files to re-create our analyses (found [here](http://linkssssssss.url))
+    * R markdown files to re-create our analyses (found [here](https://lu-c4i.github.io/refugee_prediction/))
 
 # Contact
 
