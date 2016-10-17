@@ -13,7 +13,7 @@ rm(list=ls())
 
 # Path to models
 #path <- "/users/jasper/temp/migrant_models/modelstats/"
-path <- "/srv/shiny-server/migrant_models/modelstats/"
+path <- paste0(getwd(), "/modelstats/")
 mods <- list.files(path)
 # Add names
 names(mods) <- c(6,5,4,7,1,2,3)
@@ -50,8 +50,13 @@ shinyServer(function(input, output) {
     df$date <- as.Date(ymd(df$date))
     # Add plots
     output$actualpredicted <- renderPlotly({
-      plot_ly(df, x=date,y=actual, name="Actual") %>%
-        add_trace(x=date, y=prediction, name="Predicted")
+      # Melt
+      dfm <- reshape2::melt(df, "date")
+      p <- ggplot(dfm, aes(x=date,y=value,color=variable)) +
+        geom_line(size=1) + 
+        theme_bw() +
+        scale_color_manual(values=c("blue", "orange"))
+      ggplotly(p)
     })
     output$cumSumError <- renderPlot({
       mod.of.int$error_plot

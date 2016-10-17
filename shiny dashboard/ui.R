@@ -39,8 +39,8 @@ shinyUI(pageWithSidebar(
     tabsetPanel( 
       tabPanel("Model", 
                br(),
-               p("Here is a model explanation. It is super short right now because this text is simply a placeholder. "),
-               br(),
+               #p("Here is a model explanation. It is super short right now because this text is simply a placeholder. "),
+               #br(),
                plotlyOutput("actualpredicted"),
                br(),
                tableOutput("ErrorStatsTable")),
